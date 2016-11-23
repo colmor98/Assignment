@@ -5,17 +5,25 @@ Description: A spaceship view onto a foreign planet
 */
 
 //Globals
+//images
 PImage pic;
 PImage img;
+PImage mon;
+
+//var
 int loading_bar = 0;
+
+//classes
 loading load = new loading();
 moon moon1 = new moon();
+moonInfo mInfo = new moonInfo();
 
 void setup()
 {
   size(1000,625);
   pic = loadImage("spaceplanet.jpg");
   img = loadImage("stars.jpg");
+  mon = loadImage("moon.png");
 }
 
 void window()
@@ -40,9 +48,13 @@ void draw()
    
     background(pic);
     moon1.render();
-    
   }
-  else
+   //if moon clicked, call MoonInfo
+    else if(loading_bar == 301)
+    {
+      mInfo.render();
+    }//end if
+    else
   {
     load.render();
   }
