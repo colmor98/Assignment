@@ -4,6 +4,7 @@ Student Number: C15502723
 Description: A spaceship view onto a foreign planet
 */
 
+PImage pic;
 PImage img;
 int loading_bar = 0;
 loading load = new loading();
