@@ -34,16 +34,38 @@ void setup()
 
 void window()
 {
+  if( mousePressed == true)
+  {
+    //moon one info
     stroke(255);
     noFill();
     beginShape( );
-    vertex(200,30);
-    vertex(800,30);
-    vertex(900,100);
-    vertex(900,300);
-    vertex(100,300);
-    vertex(100,100);
-    endShape(CLOSE);
+    vertex(530,200);
+    vertex(580,150 );
+    vertex(610,150);
+    endShape();
+    //text for moon one
+    text("Ganymede",612,148);
+    textFont(font1,18);
+    fill(255);
+    
+    //jupiter line
+    stroke(255);
+    noFill();
+    beginShape();
+    vertex(350,200);
+    vertex(400,150);
+    vertex(450,150);
+    endShape();
+    //jupiter tag
+    text("Jupiter",452,150);
+    textFont(font1,18);
+    fill(255);
+  }
+  else
+  {
+    noStroke(); 
+  }
     
 }
 
@@ -54,6 +76,7 @@ void draw()
    
     background(pic);
     moon1.render();
+    window();
   }
    //if moon clicked, call MoonInfo
     else if(loading_bar == 301)
