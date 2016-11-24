@@ -10,6 +10,10 @@ PImage pic;
 PImage img;
 PImage mon;
 
+//font
+PFont font;
+PFont font1;
+
 //var
 int loading_bar = 0;
 
@@ -24,6 +28,8 @@ void setup()
   pic = loadImage("spaceplanet.jpg");
   img = loadImage("stars.jpg");
   mon = loadImage("moon.png");
+  font = loadFont("AgencyFB-Bold-48.vlw");
+  font1 = loadFont("AgencyFB-Reg-48.vlw");
 }
 
 void window()

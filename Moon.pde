@@ -1,5 +1,6 @@
 class moon
 {
+  
    moon()
    {
      
@@ -11,10 +12,14 @@ class moon
      noFill();
      ellipse(520,205, 30,30);
      
-     if(mousePressed == true)
+     if( keyPressed)
      {
-       loading_bar = 301;
-     }
+       if( key =='m' || key == 'M')
+       {
+         loading_bar = 301;
+       }
+       
+     }//end outer if
      
-   }
-}
+   }//end render
+}//end class
